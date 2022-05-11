@@ -1,0 +1,45 @@
+
+<div class="card m-2">
+    <div class="card-body">
+
+
+<form [formGroup]="form">
+    <div class="mb-3">
+      <label  class="form-label">ID Prodcuto</label>
+      <input  class="form-control" formControlName="idProducto" name="producto-id" id="producto-id">
+    </div>
+
+    <div class="mb-3">
+        <label  class="form-label">Tipo de Producto</label>
+        <select formControlName="tipoProducto" name="producto-tipoProducto" id="producto-tipoProducto">
+            <option value={{1}}>Electronica</option>
+            <option value={{2}}>Ropa y Calzado</option>
+            <option value={{3}}>Comida</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label  class="form-label">Nombre</label>
+        <input  class="form-control" formControlName="nombre" name="producto-nombre" id="producto-nombre">
+      </div>
+
+      <div class="mb-3">
+        <label  class="form-label">Precio</label>
+        <input  class="form-control" formControlName="precio"
+        name="producto-precio" id="producto-precio" >
+      </div>
+
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input">
+        <label class="form-check-label" for="exampleCheck1">Aplicar descuento</label>
+      </div>
+
+
+    <button type="submit" class="btn btn-primary"> Agregar Producto</button>
+  </form>
+
+</div>
+</div>
+
+<code>{{form.value | json}}</code>
